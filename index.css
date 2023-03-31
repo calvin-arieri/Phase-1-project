@@ -1,0 +1,29 @@
+#footer{
+    display: flex;
+    color: antiquewhite;
+    background-color: black;
+
+}
+#contact{
+    margin-left: 10cm;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#offices{
+    margin-left: 10cm;
+}
+.s{
+    height: 1cm;
+    margin-left: 0.5cm;
+}
+.sa{
+    height: 1cm;
+}
+#about{
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: aliceblue;
+ 
+}
