@@ -40,7 +40,7 @@ a:link {
     color: blue;
   }
 .topnav {
-    background-color:transparent;
+    background-image: url(images/cytonn-photography-n95VMLxqM2I-unsplash.jpg);
     overflow: hidden;
   }
   
@@ -66,24 +66,3 @@ a:link {
   .topnav .icon {
     display: none;
   }
-  #header{
-    background-image: url(images/cytonn-photography-n95VMLxqM2I-unsplash.jpg);
-  }
-
-h1{
-    color: white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
-    background-color: darkgrey;
- 
-}
-#about1{
-    font-size: xx-large;
-    color: lightgray;
-    box-shadow: 10px 10px grey;
-    border-radius: 10%;
-    height: 6cm;
-    width:10cm;
-
-}
