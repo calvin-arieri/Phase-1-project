@@ -1,32 +1,4 @@
-#footer{
-    display: flex;
-    color: antiquewhite;
-    background-color: black;
-    font-size: large;
 
-}
-#contact{
-    margin-left: 10cm;   
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
-#offices{
-    margin-left: 10cm;
-}
-.s{
-    height: 1cm;
-    margin-left: 0.5cm;
-}
-.sa{
-    height: 1cm;
-}
-#about{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-decoration: none;
-    color: aliceblue;
-    margin-left: 1cm;
- 
-}
 a:link {
     color: red;
   }
@@ -40,7 +12,7 @@ a:link {
     color: blue;
   }
 .topnav {
-    background-image: url(images/cytonn-photography-n95VMLxqM2I-unsplash.jpg);
+    
     overflow: hidden;
   }
   
@@ -66,3 +38,14 @@ a:link {
   .topnav .icon {
     display: none;
   }
+.signIn{
+  background-color: green;
+  font-weight: bold;
+}
+.signIn :hover{
+  color:aqua;
+}
+.signUp{
+  background:rgb(0, 115, 255) ;
+  margin-left: 0.1cm;
+}
