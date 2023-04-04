@@ -32,23 +32,74 @@ fetch(url)
     }
     //Renders form for hire purchase
     document.getElementById("calculator").addEventListener('click',()=>{
-        const calculatorForm = document.createElement("form")
-        calculatorForm.id = 'form'
-        calculatorForm.innerHTML = `
+        document.getElementById("calculator").innerHTML = `
         <label>Enter price of the car </label><br>
-        <input type="number"><br>
+        <input id="price" type="text"><br>
         <label for="months">How many months will you use to pay</label><br>
-        <input type="number"><br>
-        <button>calculate</button>`
-
-        //rendering form
-        document.getElementById("calculator").appendChild(calculatorForm)
+        <input id="period" type="text"><br>
+        <button onclick="calculateAmountPaid">calculate</button>`       
     })
     //calculate hire purchase price
-    calculateAmountPaid =() =>{
-        //defining co
+    calculateAmountPaid =(e) =>{
+        e.target.preventDefault()
+        //defining constants
+        const interest1 = 1.6
+        const interest2 = 1.2
+        const amount = document.getElementById("price").value
+        const deposit = 0.1*amount
+        const period = document.getElementById("period").value
+        if(amount < 4000000){
+            hirePurchase = amount * interest1
+            interest = "20%"
+        }
+        else{
+            hirePurchase = amount*interest2
+            interest = "10%"
+        }
+        let totalInstallment= hirePurchase - deposit
+        let monthlyInstallment = totalInstallment/period
 
+        let fullPayment = totalInstallment + deposit
+
+        //rendering in html 
+        document.getElementById("outcome").innerHTML=`
+        <p >
+        <strong> Deposit to be paid:</strong>${deposit}
+        <strong> Interest rate:</strong>${interest}
+        <strong> Total installment:</strong>${totalInstallment}
+        <strong> Monthly installments:</strong>${monthlyInstallment}
+        <strong> Period:</strong>${period}
+        <strong> Total amount to be paid:</strong>${fullPayment}
+        </p>
+        `
     }
+
+    giveResponse = () => {
+        const question = document.getElementById("1").value
+        const ask = question.toLowerCase()
+        //console.log(ask)
+        question1 = "which are the best cars for 7 people"
+        question2 ="which is the most cheapest car i can find"
+
+        if(ask === question1){
+            reply = "Most of the SUV cars are able to carry seven peaple at a go."
+            example ="landcruiser, RAV 4 , Jimny"
+        }
+        if (ask === question2) {
+            reply = "Go for the small cars they are also good in fuel consumption"
+            example = "Alto, Vitz"            
+        } else {
+            reply = "We will repond soon please wait"
+            example = "checking......."
+        }
+        //console.log(reply, example)
+        document.getElementById("answer").innerHTML =`
+        "${reply}.<br>Some of the cars include${example}
+        <br>"
+        <em> Replied by <strong>Calvin</strong> automotive engineer</em>
+        `
+    }
+
 
    
     
