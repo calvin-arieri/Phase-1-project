@@ -20,7 +20,7 @@
         "sold":0,
         "condition":"Brand New",
         "mileage":200,
-        "topspeed":"210km/hr",
+        "topspeed":"100km/hr",
         "fuelconsumption":1
       },
       {
@@ -32,7 +32,7 @@
         "sold":0,
         "condition":"Foreign used",
         "mileage":200,
-        "topspeed":"210km/hr",
+        "topspeed":"180km/hr",
         "fuelconsumption":1
       },
       {
@@ -44,7 +44,7 @@
         "sold":0,
         "condition":"Foreign used",
         "mileage":200,
-        "topspeed":"210km/hr",
+        "topspeed":"180km/hr",
         "fuelconsumption":1
       },
       {
@@ -56,7 +56,7 @@
         "sold":0,
         "condition":"Brand New",
         "mileage":200,
-        "topspeed":"210km/hr",
+        "topspeed":"200km/hr",
         "fuelconsumption":1
       }
     ]
