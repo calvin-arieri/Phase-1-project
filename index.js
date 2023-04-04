@@ -85,11 +85,11 @@ fetch(url)
 
         if(ask === question1){
             reply = "Most of the SUV cars are able to carry seven peaple at a go."
-            example ="landcruiser, RAV 4 , Jimny"
+            example ="eg.landcruiser, RAV 4 , Jimny"
         }
         else if(ask === question2) {
             reply = "Go for the small cars they are also good in fuel consumption"
-            example = "Alto, Vitz"            
+            example = "eg. Alto, Vitz"            
         } 
         else if(ask === "hello"){
             reply = "Thank you for contacting Keroka dealers"
@@ -101,8 +101,8 @@ fetch(url)
         }
         //console.log(reply, example)
         document.getElementById("answer").innerHTML =`
-        "Hello, ${name} ${reply}.<br>Some of the cars include${example}
-        <br>"
+        "Hello, ${name} ${reply}.<br>${example}"
+        <br>
         <em> Replied by <strong>Calvin</strong> automotive engineer</em>
         `
     }
