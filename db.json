@@ -1,0 +1,63 @@
+{
+    "Cars": [
+      {
+        "id": 1,
+        "name": "Landcruiser",
+        "brand":"Toyota",
+        "image": "https://editorial.pxcrush.net/carsales/general/editorial/2021-toyota-landcruiser-300-001.jpg?width=1024&height=683",
+        "Price": 0,
+        "sold": 0,
+        "condition":"Brand New",
+        "mileage":200,
+        "fuelconsumption":1
+      },
+      {
+        "id": 2,
+        "name": "Alto",
+        "brand":"Suzuki",
+        "image": "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/AltoModelImage.jpg&w=730&h=484&q=75&c=1",
+        "price": 0,
+        "sold":0,
+        "condition":"Brand New",
+        "mileage":200,
+        "topspeed":"210km/hr",
+        "fuelconsumption":1
+      },
+      {
+        "id": 3,
+        "name": "Outlander",
+        "brand":"Suzuki",
+        "image": "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/OutlanderModelImage.jpg&w=730&h=484&q=75&c=1",
+        "price": 0,
+        "sold":0,
+        "condition":"Foreign used",
+        "mileage":200,
+        "topspeed":"210km/hr",
+        "fuelconsumption":1
+      },
+      {
+        "id": 4,
+        "name": "RAV 4",
+        "brand":"Toyota",
+        "image": "https://www.topgear.com/sites/default/files/cars-car/image/2021/06/1_toyota_rav4.jpg",
+        "price": 0,
+        "sold":0,
+        "condition":"Foreign used",
+        "mileage":200,
+        "topspeed":"210km/hr",
+        "fuelconsumption":1
+      },
+      {
+        "id": 5,
+        "name": "Jimny",
+        "brand":"Suzuki",
+        "image": "https://www.suzuki-kenya.com/media/gamme/modeles/images/00fa9d25362bf0e2f39472706cc8a2b8.jpeg",
+        "price": 0,
+        "sold":0,
+        "condition":"Brand New",
+        "mileage":200,
+        "topspeed":"210km/hr",
+        "fuelconsumption":1
+      }
+    ]
+  }
