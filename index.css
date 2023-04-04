@@ -115,5 +115,27 @@ body{
   text-align: center;
   margin-top: 2cm;
 }
+.card1 {
+  box-shadow: 0 8px 13px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border: #e3e6e9;
+  border-radius: 10px 10px 1px 10px;
+  width: 8cm;
+  margin-left: 0.3cm;
+  flex-direction: 4 ;
+}
+.card1:hover {
+  box-shadow: 0 16px 25px 0 black;
+  transform: matrix3d(1 , 3);
+}
+
+#card {
+  float: none;
+  flex-wrap: wrap;
+  display: flex;
+}
+#move{
+  margin-left: 0.5cm;
+}
 
 

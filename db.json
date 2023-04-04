@@ -4,48 +4,54 @@
         "id": 1,
         "name": "Landcruiser",
         "brand":"Toyota",
-        "image": "https://editorial.pxcrush.net/carsales/general/editorial/2021-toyota-landcruiser-300-001.jpg?width=1024&height=683",
-        "Price": 0,
+        "image": "https://toyotakenya.com/wp-content/uploads/2019/09/Land-cruiser-full-1.png",
+        "Price": 600000,
         "sold": 0,
         "condition":"Brand New",
         "mileage":200,
-        "fuelconsumption":1
+        "topspeed":"200km/hr",
+        "fuelconsumption":1,
+        "comment":"It is good for those who love luxury",
+        "review": 0
       },
       {
         "id": 2,
         "name": "Alto",
         "brand":"Suzuki",
         "image": "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/AltoModelImage.jpg&w=730&h=484&q=75&c=1",
-        "price": 0,
+        "price": 400000,
         "sold":0,
         "condition":"Brand New",
         "mileage":200,
         "topspeed":"100km/hr",
-        "fuelconsumption":1
+        "fuelconsumption":1,
+        "comment":"Good for short distance travell and fuel consumption"
       },
       {
         "id": 3,
         "name": "Outlander",
         "brand":"Suzuki",
         "image": "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/OutlanderModelImage.jpg&w=730&h=484&q=75&c=1",
-        "price": 0,
+        "price": 3100000,
         "sold":0,
         "condition":"Foreign used",
         "mileage":200,
         "topspeed":"180km/hr",
-        "fuelconsumption":1
+        "fuelconsumption":1,
+        "comment":"Good for family"
       },
       {
         "id": 4,
         "name": "RAV 4",
         "brand":"Toyota",
         "image": "https://www.topgear.com/sites/default/files/cars-car/image/2021/06/1_toyota_rav4.jpg",
-        "price": 0,
+        "price": 2900000,
         "sold":0,
         "condition":"Foreign used",
         "mileage":200,
         "topspeed":"180km/hr",
-        "fuelconsumption":1
+        "fuelconsumption":1,
+        "comment":"Best SUV car for small families"
       },
       {
         "id": 5,
@@ -53,11 +59,25 @@
         "brand":"Suzuki",
         "image": "https://www.suzuki-kenya.com/media/gamme/modeles/images/00fa9d25362bf0e2f39472706cc8a2b8.jpeg",
         "price": 0,
+        "sold":4100000,
+        "condition":"Brand New",
+        "mileage":200,
+        "topspeed":"200km/hr",
+        "fuelconsumption":1,
+        "comment":"This is the best car for off roaders"
+      },
+      {
+        "id": 5,
+        "name": "Jimny",
+        "brand":"Suzuki",
+        "image": "https://www.suzuki-kenya.com/media/gamme/modeles/images/00fa9d25362bf0e2f39472706cc8a2b8.jpeg",
+        "price": 2135450,
         "sold":0,
         "condition":"Brand New",
         "mileage":200,
         "topspeed":"200km/hr",
-        "fuelconsumption":1
+        "fuelconsumption":1,
+        "comment":"This is the best car for off roaders"
       }
     ]
   }
