@@ -33,16 +33,15 @@ fetch(url)
     //Renders form for hire purchase
     document.getElementById("calculator").addEventListener('click',()=>{
         document.getElementById("calculator").innerHTML = `
-        <label>Enter price of the car </label><br>
+        <span>Enter price of the car </span><br>
         <input id="price" type="text"><br>
-        <label for="months">How many months will you use to pay</label><br>
+        <span>How many months will you use to pay</span><br>
         <input id="period" type="text"><br>
-        <button onclick="calculateAmountPaid">calculate</button>`       
+        <button onclick="calculateAmountPaid()">calculate</button>`       
     })
 
     //calculate hire purchase price
-    calculateAmountPaid =(e) =>{
-        e.target.preventDefault()
+    calculateAmountPaid =() =>{
         //defining constants
         const interest1 = 1.6
         const interest2 = 1.2
