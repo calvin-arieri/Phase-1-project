@@ -137,5 +137,20 @@ body{
 #move{
   margin-left: 0.5cm;
 }
+#comments{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1cm;
+}
+#question{
+  width: 50%;
+  background-color: #5495DF;
+  font-size: larger;
+}
+#response{
+  background-color: #0D2949;
+  width: 50%;
+  color: #5495DF;
+}
 
 

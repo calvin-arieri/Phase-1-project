@@ -39,6 +39,7 @@ fetch(url)
         <input id="period" type="text"><br>
         <button onclick="calculateAmountPaid">calculate</button>`       
     })
+
     //calculate hire purchase price
     calculateAmountPaid =(e) =>{
         e.target.preventDefault()
@@ -75,6 +76,7 @@ fetch(url)
     }
 
     giveResponse = () => {
+        const name = document.getElementById("2").value
         const question = document.getElementById("1").value
         const ask = question.toLowerCase()
         //console.log(ask)
@@ -85,16 +87,21 @@ fetch(url)
             reply = "Most of the SUV cars are able to carry seven peaple at a go."
             example ="landcruiser, RAV 4 , Jimny"
         }
-        if (ask === question2) {
+        else if(ask === question2) {
             reply = "Go for the small cars they are also good in fuel consumption"
             example = "Alto, Vitz"            
-        } else {
+        } 
+        else if(ask === "hello"){
+            reply = "Thank you for contacting Keroka dealers"
+            example = "How may we help you today"
+        }
+        else {
             reply = "We will repond soon please wait"
             example = "checking......."
         }
         //console.log(reply, example)
         document.getElementById("answer").innerHTML =`
-        "${reply}.<br>Some of the cars include${example}
+        "Hello, ${name} ${reply}.<br>Some of the cars include${example}
         <br>"
         <em> Replied by <strong>Calvin</strong> automotive engineer</em>
         `
