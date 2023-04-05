@@ -143,10 +143,11 @@ body{
   flex-direction: row;
   margin-bottom: 1cm;
 }
-#question{
+#question {
   width: 50%;
   background-color: #5495DF;
   font-size: larger;
+  
 }
 #response{
   background-color: #0D2949;
@@ -161,4 +162,10 @@ body{
   color: #0D2949;
 }
 
+#outcome{
+  margin-right: 0.2%;
+  width:50%;
+  background-color: #5495DF;
+  color: #0D2949;
+}
 

@@ -17,11 +17,11 @@ fetch(url)
         <P><strong>${car.name}<br></strong>
         <img src=${car.image} height="200px" width="300px">
         <strong id="move">Brand:</strong>${car.brand}<br>
-        <strong id="move">Price:</strong>${car.price}<br>
+        <strong id="move">Price:</strong>${car.price} Kenyan shillings<br>
         <strong id="move">Condition:</strong>${car.condition}<br>
-        <strong id="move">Mileage:</strong>${car.mileage}<br>
+        <strong id="move">Mileage:</strong>${car.mileage}miles<br>
         <strong id="move">Top speed:</strong>${car.topspeed}<br>
-        <strong id="move">Fuel consumption:</strong>${car.fuelconsumption}<br>
+        <strong id="move">Fuel consumption:</strong>${car.fuelconsumption}litre/km<br>
         <strong id="move">Best for:</strong>${car.comment}<br>
         <strong id="move">Likes:</strong> <span id="rev">${car.review}</span><br>
         <strong id="move"><button id ="buy">Like</button><strong>
@@ -30,7 +30,7 @@ fetch(url)
         // The like event
         cars.querySelector("#buy").addEventListener('click',()=>{
             car.review ++;
-           
+            //changing the current number of likes           
             cars.querySelector('span').textContent = car.review
             
         })
@@ -52,30 +52,36 @@ fetch(url)
         const amount = document.getElementById("price").value
         const deposit = 0.1*amount
         const period = document.getElementById("period").value
-        if(amount < 4000000){
-            hirePurchase = amount * interest1
-            interest = "20%"
+        if(period<=24){
+            // calculate hire purchase if time is less than two years
+            if(amount < 4000000){
+                hirePurchase = amount * interest1
+                interest = "20%"
+            }
+            else{
+                hirePurchase = amount*interest2
+                interest = "10%"
+            }
+            let totalInstallment= hirePurchase - deposit
+            let monthlyInstallment = totalInstallment/period
+
+            let fullPayment = totalInstallment + deposit
+
+            //rendering in html 
+            document.getElementById("outcome").innerHTML=`
+            <p >
+            <strong> Deposit to be paid:</strong>${deposit}<br>
+            <strong> Interest rate:</strong>${interest}<br>
+            <strong> Total installment:</strong>${totalInstallment}<br>
+            <strong> Monthly installments:</strong>${monthlyInstallment}<br>
+            <strong> Period:</strong>${period}<br>
+            <strong> Total amount to be paid:</strong>${fullPayment}
+            </p>
+            `
         }
         else{
-            hirePurchase = amount*interest2
-            interest = "10%"
+            window.alert("You cannot pay for more than two years")
         }
-        let totalInstallment= hirePurchase - deposit
-        let monthlyInstallment = totalInstallment/period
-
-        let fullPayment = totalInstallment + deposit
-
-        //rendering in html 
-        document.getElementById("outcome").innerHTML=`
-        <p >
-        <strong> Deposit to be paid:</strong>${deposit}
-        <strong> Interest rate:</strong>${interest}
-        <strong> Total installment:</strong>${totalInstallment}
-        <strong> Monthly installments:</strong>${monthlyInstallment}
-        <strong> Period:</strong>${period}
-        <strong> Total amount to be paid:</strong>${fullPayment}
-        </p>
-        `
     }
 
     giveResponse = () => {
@@ -109,6 +115,9 @@ fetch(url)
         <em> Replied by <strong>Calvin</strong> automotive engineer</em>
         `
     }
+
+    
+
 
 
    
