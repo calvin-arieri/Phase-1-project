@@ -36,7 +36,12 @@
 
     <!-- displaying the cars in stock -->
     <div id="renderingcars">
-        <h2 id="render">Here are some of the cars in stock</h2>
+        <h2 id="render" >Here are some of the cars in stock</h2>
+        <p id="infor">
+            We are here to help you chose the best car.If stuck and you need help in choosing a car you can ask one
+            our agents by telling them what your dream car is and they will advice you on the best cars that fit your 
+            needs. To do so just call us or use our question and response section and will reply immediately.
+        </p >
         <div id="button"></div>
         <div id="card">
         </div>
@@ -47,6 +52,13 @@
             </p>            
             <div id="calculator">
                 <button id="calculator">Calculate Hire purchase amount</button>
+                <div style="display: none;" id="calc">
+                <span>Enter price of the car </span><br>
+                <input id="price" type="text"><br>
+                <span>How many months will you use to pay</span><br>
+                <input id="period" type="text"><br>
+                <button onclick="calculateAmountPaid()">calculate</button>
+                </div>
             </div>
             <div id="outcome">
 

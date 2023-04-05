@@ -1,8 +1,13 @@
+addEventListener('DOMContentLoaded',fetchingFunction())
+
 // fetching from db.json
+function fetchingFunction(){
 const url = "http://localhost:3000/Cars"
 fetch(url)
 .then(res=> res.json())
 .then(data => data.forEach(car =>renderCars(car)))
+}
+
 //rendering cars
     function renderCars(car){
         const cars=document.createElement("p")
@@ -18,26 +23,25 @@ fetch(url)
         <strong id="move">Top speed:</strong>${car.topspeed}<br>
         <strong id="move">Fuel consumption:</strong>${car.fuelconsumption}<br>
         <strong id="move">Best for:</strong>${car.comment}<br>
-        <strong id="move">Review:</strong><span>${car.review}</span>
-        <button>Like</button> 
+        <strong id="move">Likes:</strong> <span id="rev">${car.review}</span><br>
+        <strong id="move"><button id ="buy">Like</button><strong>
         </p>
-        `
-
-        document.getElementById("card").appendChild(cars)
-        addReview = () =>{
+        `  
+        // The like event
+        cars.querySelector("#buy").addEventListener('click',()=>{
             car.review ++;
-            // console.log(car.review[1])
-            console.log(cars.getElementsByTagName("span"))
-        }
+           
+            cars.querySelector('span').textContent = car.review
+            
+        })
+        //appending the cars 
+        document.getElementById("card").appendChild(cars)
+
     }
+
     //Renders form for hire purchase
     document.getElementById("calculator").addEventListener('click',()=>{
-        document.getElementById("calculator").innerHTML = `
-        <span>Enter price of the car </span><br>
-        <input id="price" type="text"><br>
-        <span>How many months will you use to pay</span><br>
-        <input id="period" type="text"><br>
-        <button onclick="calculateAmountPaid()">calculate</button>`       
+        document.getElementById("calc").style.display = "block"       
     })
 
     //calculate hire purchase price
@@ -108,4 +112,4 @@ fetch(url)
 
 
    
-    
+   

@@ -70,7 +70,7 @@ background-color: #04AA6D;
 #what{
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bolder;
-  font-size: 1cm;
+  font-size: 0.8cm;
   width:70%;
   margin-left: 15%;  
   color:#A9CAEF;
@@ -94,7 +94,7 @@ background-color: #04AA6D;
 }
 #company{
   color:#0D2949;
-  font-size: 3.5cm;
+  font-size: 2.3cm;
   text-align: center;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -122,7 +122,7 @@ body{
   border-radius: 10px 10px 1px 10px;
   width: 8cm;
   margin-left: 0.3cm;
-  flex-direction: 4 ;
+  flex-direction: 3 ;
 }
 .card1:hover {
   box-shadow: 0 16px 25px 0 black;
@@ -130,7 +130,8 @@ body{
 }
 
 #card {
-  float: none;
+  padding-right: 15%;
+  padding-left: 15%;
   flex-wrap: wrap;
   display: flex;
 }
@@ -151,6 +152,13 @@ body{
   background-color: #0D2949;
   width: 50%;
   color: #5495DF;
+}
+#infor{
+  padding-left:2%;
+  font-size: x-large;
+  padding-right:25% ;
+  background-blend-mode:darken;
+  color: #0D2949;
 }
 
 

@@ -2,7 +2,7 @@
     "Cars": [
       {
         "id": 1,
-        "name": "Landcruiser",
+        "name": "Hard top landcruiser",
         "brand":"Toyota",
         "image": "https://toyotakenya.com/wp-content/uploads/2019/09/Land-cruiser-full-1.png",
         "Price": 600000,
@@ -25,7 +25,8 @@
         "mileage":200,
         "topspeed":"100km/hr",
         "fuelconsumption":1,
-        "comment":"Good for short distance travell and fuel consumption"
+        "comment":"Good for short distance travell and fuel consumption",
+        "review": 0
       },
       {
         "id": 3,
@@ -38,7 +39,8 @@
         "mileage":200,
         "topspeed":"180km/hr",
         "fuelconsumption":1,
-        "comment":"Good for family"
+        "comment":"Good for family",
+        "review": 0
       },
       {
         "id": 4,
@@ -51,7 +53,8 @@
         "mileage":200,
         "topspeed":"180km/hr",
         "fuelconsumption":1,
-        "comment":"Best SUV car for small families"
+        "comment":"Best SUV car for small families",
+        "review": 0
       },
       {
         "id": 5,
@@ -64,7 +67,8 @@
         "mileage":200,
         "topspeed":"200km/hr",
         "fuelconsumption":1,
-        "comment":"This is the best car for off roaders"
+        "comment":"This is the best car for off roaders",
+        "review": 0
       },
       {
         "id": 5,
@@ -77,7 +81,8 @@
         "mileage":200,
         "topspeed":"200km/hr",
         "fuelconsumption":1,
-        "comment":"This is the best car for off roaders"
+        "comment":"This is the best car for off roaders",
+        "review": 0
       }
     ]
   }
