@@ -168,4 +168,30 @@ body{
   background-color: #5495DF;
   color: #0D2949;
 }
+#buyForm{
+  background-color: #0D2949;
+  color: #5495DF;
+  margin-left: 30%;
+  width: 40%;
 
+}
+#a, #b, #c, #d, #e ,#f {
+  border: 0px 0px 10px 0px black;
+  margin-top: 0.2 cm;
+  color: white;
+  background-color: transparent;
+  font-size: x-large;
+}
+#a, #b, #c, #d, #e ,#f, .label{
+  margin-left: 0.8cm;
+}
+.confirmation{
+  background-color: #0D2949;
+  color:white;
+  font-size: xx-large;
+  box-shadow: 0px 20px 20px 0px;
+}
+#cofirmationImage{
+  width: 1cm;
+  margin-left: 46%;
+}

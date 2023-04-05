@@ -115,7 +115,25 @@ fetch(url)
         <em> Replied by <strong>Calvin</strong> automotive engineer</em>
         `
     }
+ buyCar = () =>{
+    const name = document.getElementById("a").value
+    const email = document.getElementById("b").value
+    const carName = document.getElementById("d").value
+    const date = document.getElementById("f").value
 
+    //Output after buying 
+    const buyingMsg = document.createElement("p")
+    buyingMsg.className="confirmation"
+    
+    // content inside the buying msg
+    buyingMsg.innerHTML=`
+    Thank you, ${name} for choosing Keroka car dealers.Your request of buying  ${carName} from us has been received
+    on ${date}. Expect a call from us soon in regards to the request <br>
+    <img src="images/pngtree-check-mark-green-tick-png-image_4535297-removebg-preview.png" id="cofirmationImage">
+    `
+    document.getElementById("sale").remove()
+    document.getElementById("buyForm").appendChild(buyingMsg)
+ }
     
 
 
