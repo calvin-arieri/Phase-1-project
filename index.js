@@ -14,16 +14,16 @@ fetch(url)
         cars.className = "card1"
         cars.innerHTML=`
         
-        <P><strong>${car.name}<br></strong>
+        <P><strong> ${car.name}<br></strong>
         <img src=${car.image} height="200px" width="300px">
-        <strong id="move">Brand:</strong>${car.brand}<br>
-        <strong id="move">Price:</strong>${car.price} Kenyan shillings<br>
-        <strong id="move">Condition:</strong>${car.condition}<br>
-        <strong id="move">Mileage:</strong>${car.mileage}miles<br>
-        <strong id="move">Top speed:</strong>${car.topspeed}<br>
-        <strong id="move">Fuel consumption:</strong>${car.fuelconsumption}litre/km<br>
-        <strong id="move">Best for:</strong>${car.comment}<br>
-        <strong id="move">Likes:</strong> <span id="rev">${car.review}</span><br>
+        <strong id="move">Brand:</strong> ${car.brand}<br>
+        <strong id="move">Price:</strong> ${car.price} Kenyan shillings<br>
+        <strong id="move">Condition:</strong> ${car.condition}<br>
+        <strong id="move">Mileage:</strong> ${car.mileage}miles<br>
+        <strong id="move">Top speed:</strong> ${car.topspeed}<br>
+        <strong id="move">Fuel consumption:</strong> ${car.fuelconsumption}litre/km<br>
+        <strong id="move">Best for:</strong> ${car.comment}<br>
+        <strong id="move">Likes:</strong> <span id="rev">  ${car.review}</span><br>
         <strong id="move"><button id ="buy">Like</button><strong>
         </p>
         `  
@@ -40,7 +40,7 @@ fetch(url)
     }
 
     //Renders form for hire purchase
-    document.getElementById("calculator").addEventListener('click',()=>{
+    document.getElementById("calculatorButton").addEventListener('click',()=>{
         document.getElementById("calc").style.display = "block"       
     })
 
@@ -68,14 +68,16 @@ fetch(url)
             let fullPayment = totalInstallment + deposit
 
             //rendering in html 
+            document.getElementById("calculator").remove()
+            document.getElementById("calculatorButton").remove()
             document.getElementById("outcome").innerHTML=`
             <p >
-            <strong> Deposit to be paid:</strong>${deposit}<br>
-            <strong> Interest rate:</strong>${interest}<br>
-            <strong> Total installment:</strong>${totalInstallment}<br>
-            <strong> Monthly installments:</strong>${monthlyInstallment}<br>
-            <strong> Period:</strong>${period}<br>
-            <strong> Total amount to be paid:</strong>${fullPayment}
+            <strong> Deposit to be paid:</strong> ${deposit}<br>
+            <strong> Interest rate:</strong> ${interest}<br>
+            <strong> Total installment:</strong> ${totalInstallment}<br>
+            <strong> Monthly installments:</strong> ${monthlyInstallment}<br>
+            <strong> Period:</strong> ${period}<br>
+            <strong> Total amount to be paid:</strong> ${fullPayment}
             </p>
             `
         }
@@ -131,6 +133,7 @@ fetch(url)
     on ${date}. Expect a call from us soon in regards to the request <br>
     <img src="images/pngtree-check-mark-green-tick-png-image_4535297-removebg-preview.png" id="cofirmationImage">
     `
+    //displaying the output
     document.getElementById("sale").remove()
     document.getElementById("buyForm").appendChild(buyingMsg)
  }

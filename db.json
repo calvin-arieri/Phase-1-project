@@ -11,7 +11,7 @@
         "mileage":0,
         "topspeed":"200km/hr",
         "fuelconsumption":1,
-        "comment":"It is good for those who love luxury",
+        "comment":"Good for offroads",
         "review": 0
       },
       {
@@ -25,7 +25,7 @@
         "mileage":200,
         "topspeed":"100km/hr",
         "fuelconsumption":1,
-        "comment":"Good for short distance travell and fuel consumption",
+        "comment":"Has good fuel consumption",
         "review": 0
       },
       {
