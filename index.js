@@ -31,23 +31,23 @@ fetch(url)
         cars.querySelector("#buy").addEventListener('click',()=>{
             car.review ++;
             //changing the current number of likes           
-            cars.querySelector('span').textContent = car.review
+            cars.querySelector('span').textContent = car.review;
             
         })
         //appending the cars 
-        document.getElementById("card").appendChild(cars)
+        document.getElementById("card").appendChild(cars);
 
     }
 
     //Renders form for hire purchase
     document.getElementById("calculatorButton").addEventListener('click',()=>{
-        const calc=document.getElementById("calc")
-        calc.style.display = "block"
-        calc.style.backgroundColor="#0D2949"
-        calc.style.color = "#A9CAEF"
-        calc.style.marginLeft="35%"
-        calc.style.width="25%"
-        calc.style.marginBottom="2%"
+        const calc=document.getElementById("calc");
+        calc.style.display = "block";
+        calc.style.backgroundColor="#0D2949";
+        calc.style.color = "#A9CAEF";
+        calc.style.marginLeft="35%";
+        calc.style.width="25%";
+        calc.style.marginBottom="2%";
                
     })
 
@@ -145,6 +145,7 @@ fetch(url)
     document.getElementById("buyForm").appendChild(buyingMsg)
  }
 
+ // displayin cllients comment
 document.getElementById('getc').addEventListener('submit',(e) =>{
     e.preventDefault()
     const theReply = document.getElementById('youreply').value
