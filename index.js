@@ -41,7 +41,14 @@ fetch(url)
 
     //Renders form for hire purchase
     document.getElementById("calculatorButton").addEventListener('click',()=>{
-        document.getElementById("calc").style.display = "block"       
+        const calc=document.getElementById("calc")
+        calc.style.display = "block"
+        calc.style.backgroundColor="#0D2949"
+        calc.style.color = "#A9CAEF"
+        calc.style.marginLeft="35%"
+        calc.style.width="25%"
+        calc.style.marginBottom="2%"
+               
     })
 
     //calculate hire purchase price
@@ -138,7 +145,14 @@ fetch(url)
     document.getElementById("buyForm").appendChild(buyingMsg)
  }
 
+document.getElementById('getc').addEventListener('submit',(e) =>{
+    e.preventDefault()
+    const theReply = document.getElementById('youreply').value
+    const yourname = document.getElementById('yourname').value
 
+    document.getElementById("out").innerHTML +=`
+    <p class="thesay">${theReply}<br><em>${yourname}</em>, client </p>`
+})
     
 
 

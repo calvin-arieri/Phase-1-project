@@ -70,10 +70,10 @@
             <div id="buy">            
                 <div id="calculator">                    
                     <div style="display: none;"  id="calc">
-                    <span>Enter price of the car </span><br>
-                    <input id="price" type="text"><br>
-                    <span>How many months will you use to pay</span><br>
-                    <input id="period" type="text"><br>
+                    <span class="hi" >Enter price of the car </span><br>
+                    <input id="price" type="text" class="hi" ><br>
+                    <span class="hi" >How many months will you use to pay</span><br>
+                    <input id="period" type="text"class="hi" ><br>
                     <button onclick="calculateAmountPaid()">calculate</button>
                     </div>
                 </div>
@@ -102,10 +102,24 @@
         </div>
         
     </div>
-   
+   <!-- comment section -->
+    <div id="commentsd">
+
+        <div id="out1">
+            <marquee behavior="" direction="right" id="out"></marquee>
+        </div>
+    </div>
+
     <!-- footer -->
     <div id="footer">        
         <div id="flex">
+            <form action="" id="getc">
+                <label class="hi" for="name">Name</label><br>
+                <input class="hi" type="text" id="yourname"><br>
+                <label class="hi" for="comment">comment</label><br>
+                <input class="hi" type="text" id="youreply"><br>
+                <input type="submit">
+            </form>
             <div id="links">
                 <div id="connection">
                     <h3>Stay Connected</h3>

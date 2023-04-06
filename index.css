@@ -53,7 +53,7 @@ background-color: #04AA6D;
 }
 #flex{
   display: flex;
-  column-gap: 8cm;
+  column-gap: 5cm;
 }
 #welcome{
   column-gap: 4cm;
@@ -154,6 +154,7 @@ body{
   background-color: #0D2949;
   width: 50%;
   color: #A9CAEF;
+  font-size: larger;
 }
 #infor{
   padding-left:2%;
@@ -165,12 +166,12 @@ body{
 }
 
 #outcome{
-  margin-left: 25%;
   width:50%;
   background-color: #0D2949;
   color:#A9CAEF;
+  margin-left: 25%;
 }
-#buyForm{
+#buyForm {
   background-color: #0D2949;
   color:#A9CAEF;
   margin-left: 30%;
@@ -200,10 +201,32 @@ body{
   width: 1cm;
   margin-left: 46%;
 }
-button{
-  background-color:rgb(104, 174, 221);
-  color: #0D2949;
-  margin-left: 28%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
+
+#out{
+  display: flex;
+  flex-direction: row;
+}
+#thesay{
+  flex-direction: row;
+}
+
+
+input[type="submit"],button{
+  margin-left: 25%;
+  color: #A9CAEF;
+  background-color: #0D2949;
+  margin-top: 2%;
+}
+#getc{
+  background-color: #0D2949;
+  margin-left: 1%;
+  color:#A9CAEF;
+  margin-top: 1%;
+
+}
+.hi{
+  margin-left: 5%;
+}
+#youreply{
+  height: 1cm;
 }
