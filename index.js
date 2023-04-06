@@ -137,6 +137,8 @@ fetch(url)
     document.getElementById("sale").remove()
     document.getElementById("buyForm").appendChild(buyingMsg)
  }
+
+
     
 
 

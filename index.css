@@ -127,7 +127,7 @@ body{
 }
 .card1:hover {
   box-shadow: 0 16px 25px 0 black;
-  transform: scale(1.1);
+ 
 }
 
 #card {
