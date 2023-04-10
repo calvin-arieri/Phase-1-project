@@ -88,6 +88,7 @@ background-color: #04AA6D;
   background-image: url(images/alex-suprun-A53o1drQS2k-unsplash.jpg);
   background-size: 100%;
   background-blend-mode: color;
+  background-repeat: none;
 }
 #aboutimg{
   width: 20cm;
@@ -217,6 +218,7 @@ input[type="submit"],button{
   background-color: #0D2949;
   margin-top: 2%;
 }
+
 #getc{
   background-color: #0D2949;
   margin-left: 1%;

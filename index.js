@@ -59,37 +59,43 @@ fetch(url)
         const amount = document.getElementById("price").value
         const deposit = 0.1*amount
         const period = document.getElementById("period").value
-        if(period<=24){
-            // calculate hire purchase if time is less than two years
-            if(amount < 4000000){
-                hirePurchase = amount * interest1
-                interest = "20%"
+
+        if((amount > 2000 && period > 1)){
+            if(period<=24){
+                // calculate hire purchase if time is less than two years
+                if(amount < 4000000){
+                    hirePurchase = amount * interest1
+                    interest = "20%"
+                }
+                else{
+                    hirePurchase = amount*interest2
+                    interest = "10%"
+                }
+                let totalInstallment= hirePurchase - deposit
+                let monthlyInstallment = totalInstallment/period
+
+                let fullPayment = totalInstallment + deposit
+
+                //rendering in html 
+                document.getElementById("calculator").remove()
+                document.getElementById("calculatorButton").remove()
+                document.getElementById("outcome").innerHTML=`
+                <p >
+                <strong> Deposit to be paid:</strong> ${deposit}<br>
+                <strong> Interest rate:</strong> ${interest}<br>
+                <strong> Total installment:</strong> ${totalInstallment}<br>
+                <strong> Monthly installments:</strong> ${monthlyInstallment}<br>
+                <strong> Period:</strong> ${period}<br>
+                <strong> Total amount to be paid:</strong> ${fullPayment}
+                </p>
+                `
             }
             else{
-                hirePurchase = amount*interest2
-                interest = "10%"
+                window.alert("You cannot pay for more than two years")
             }
-            let totalInstallment= hirePurchase - deposit
-            let monthlyInstallment = totalInstallment/period
-
-            let fullPayment = totalInstallment + deposit
-
-            //rendering in html 
-            document.getElementById("calculator").remove()
-            document.getElementById("calculatorButton").remove()
-            document.getElementById("outcome").innerHTML=`
-            <p >
-            <strong> Deposit to be paid:</strong> ${deposit}<br>
-            <strong> Interest rate:</strong> ${interest}<br>
-            <strong> Total installment:</strong> ${totalInstallment}<br>
-            <strong> Monthly installments:</strong> ${monthlyInstallment}<br>
-            <strong> Period:</strong> ${period}<br>
-            <strong> Total amount to be paid:</strong> ${fullPayment}
-            </p>
-            `
         }
-        else{
-            window.alert("You cannot pay for more than two years")
+        else {
+            window.alert("Please input price and time")
         }
     }
 
@@ -114,8 +120,8 @@ fetch(url)
             example = "How may we help you today"
         }
         else {
-            reply = "We will repond soon please wait"
-            example = "checking......."
+            reply = "Our agents are busy currently"
+            example = "Please wait we will send an email soon"
         }
         //console.log(reply, example)
         document.getElementById("answer").innerHTML =`
@@ -124,6 +130,7 @@ fetch(url)
         <em> Replied by <strong>Calvin</strong> automotive engineer</em>
         `
     }
+
  buyCar = () =>{
     const name = document.getElementById("a").value
     const email = document.getElementById("b").value
@@ -145,7 +152,7 @@ fetch(url)
     document.getElementById("buyForm").appendChild(buyingMsg)
  }
 
- // displayin cllients comment
+ // displaying clients comment
 document.getElementById('getc').addEventListener('submit',(e) =>{
     e.preventDefault()
     const theReply = document.getElementById('youreply').value
@@ -154,6 +161,8 @@ document.getElementById('getc').addEventListener('submit',(e) =>{
     document.getElementById("out").innerHTML +=`
     <p class="thesay">${theReply}<br><em>${yourname}</em>, client </p>`
 })
+
+
     
 
 

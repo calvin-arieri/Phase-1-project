@@ -45,21 +45,21 @@
         <div id="card">
         </div>
         <div id="buyForm">
-            <p id="sale">
+            <form id="sale">
                 <label for="name" class="label">Please enter your name</label><br>
-                <input type="text" id="a"><br>
+                <input type="text" id="a" maxlength="10"  name="name" required><br>
                 <label for="email" class="label">Enter your email</label><br>
-                <input type="email" name="" id="b" ><br>
+                <input type="email" name="" id="b" required><br>
                 <label for="phone" class="label">Phone number</label><br>
-                <input type="text" id="c"><br>
+                <input type="text" id="c" required><br>
                 <label for="car" class="label">Enter name of car</label><br>
-                <input type="text" id="d"><br>
+                <input type="text" id="d" required><br>
                 <label for="condition" class="label">Condition</label><br>
-                <input type="text" name="" id="e"><br>
+                <input type="text" name="" id="e" required ><br>
                 <label for="date" class="label">Date</label><br>
-                <input type="date" name="" id="f"><br><br>
+                <input type="date" name="" id="f" required><br><br>
                 <button onclick="buyCar()">Buy</button>
-            <p>
+            </form>
         </div>
         <div>
             <p id="infor">
@@ -70,11 +70,13 @@
             <div id="buy">            
                 <div id="calculator">                    
                     <div style="display: none;"  id="calc">
-                    <span class="hi" >Enter price of the car </span><br>
-                    <input id="price" type="text" class="hi" ><br>
-                    <span class="hi" >How many months will you use to pay</span><br>
-                    <input id="period" type="text"class="hi" ><br>
-                    <button onclick="calculateAmountPaid()">calculate</button>
+                        <form action="">
+                            <label class="hi" >Enter price of the car </label><br>
+                            <input id="price" type="text" class="hi" required><br>
+                            <label class="hi" >How many months will you use to pay</label>label><br>
+                            <input id="period" type="text"class="hi" required><br>
+                            <button onclick="calculateAmountPaid()">calculate</button>
+                        </form>
                     </div>
                 </div>
                 <div id="outcome">
@@ -91,9 +93,9 @@
                 Do you have any questions?
             </p>
             <span>Please enter your names</span><br>
-            <input type="text"  id="2"><br>
+            <input type="text"  id="2" required><br>
             <span>Your question</span><br>
-            <input type="text"  id="1"><br>
+            <input type="text"  id="1" required><br>
             <button onclick="giveResponse()">Send</button>
         </div>
         <div id="response">
@@ -128,9 +130,9 @@
                         Our social media pages
                         <div id="socialmedia">
                             <img class="media" src="images/face.png" alt="">
-                            <a target="https://instagram.com/_calvin_arieri?igshid=ZDdkNTZiNTM="><img class="media" src="images/instagram.jpeg" alt=""></a>
-                            <a target="https://twitter.com/ArieriCalvin"><img class="media" src="images/twitter.png" alt=""></a>
-                            <a target="https://www.youtube.com/@CBBT"><img class="media" src="images/youtube.png" alt=""></a>
+                            <a href="https://instagram.com/_calvin_arieri?igshid=ZDdkNTZiNTM="><img class="media" src="images/instagram.jpeg" alt="instagram"></a>
+                            <a href="https://twitter.com/ArieriCalvin"><img class="media" src="images/twitter.png" alt=""></a>
+                            <a href="https://www.youtube.com/@CBBT"><img class="media" src="images/youtube.png" alt=""></a>
                         </div>
                     </div>
                 </div>
