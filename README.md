@@ -8,8 +8,7 @@ To install the apllication.Open your browser and past the following link  https:
 
 ## How to use it
 Once you are in the folder start a new terminal while in the directory. Start the json server by typing "json-server --watch db.json"
-Then click on index.html . Once it has started you will be able to like a car by clicking on the like button.If you want to buy a car scroll to the form fo buying enter all details required.Then submit we will contact you using  the details submitted. You can also calculate the hire purchase by clicking on hirepurchase a form will then be displayed that where you will be required to enter the required values that will be used in  calculation. Other than that we have a section where questions are asked and replied immediately if one of our agents is online. You can also get in touch with us through oul online pages.
-please dont forget to comment on our site.
+Then cilck on the link below https://endearing-concha-5a0dfc.netlify.app/ . Once it has started you will be able to like a car by clicking on the like button.If you want to buy a car scroll to the form fo buying enter all details required.Then submit we will contact you using  the details submitted. You can also calculate the hire purchase by clicking on hirepurchase a form will then be displayed that where you will be required to enter the required values that will be used in  calculation. Other than that we have a section where questions are asked and replied immediately if one of our agents is online. You can Plso get in touch with us through oul online pages.Before submitting in any form ensure all fields are filled.Please dont forget to comment on our site.
 
 ## contributing 
 Anyone interested about the project you  can fork it and do the changes that they require.Please don't change the original.
