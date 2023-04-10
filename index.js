@@ -2,11 +2,12 @@ addEventListener('DOMContentLoaded',fetchingFunction())
 
 // fetching from db.json
 function fetchingFunction(){
-const url = "https://raw.githubusercontent.com/calvin-arieri/Phase-1-project/main/db.json"
+const url = "http://localhost:3000/Cars"
 fetch(url)
 .then(res=> res.json())
 .then(data => data.forEach(car =>renderCars(car)))
 }
+
 
 //rendering cars
  function renderCars(car){
