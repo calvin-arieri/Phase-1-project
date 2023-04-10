@@ -9,38 +9,38 @@ fetch(url)
 }
 
 //rendering cars
-    function renderCars(car){
-        const cars=document.createElement("p")
-        cars.className = "card1"
-        cars.innerHTML=`
-        
-        <P><strong> ${car.name}<br></strong>
-        <img src=${car.image} height="200px" width="300px">
-        <strong id="move">Brand:</strong> ${car.brand}<br>
-        <strong id="move">Price:</strong> ${car.price} Kenyan shillings<br>
-        <strong id="move">Condition:</strong> ${car.condition}<br>
-        <strong id="move">Mileage:</strong> ${car.mileage}miles<br>
-        <strong id="move">Top speed:</strong> ${car.topspeed}<br>
-        <strong id="move">Fuel consumption:</strong> ${car.fuelconsumption}litre/km<br>
-        <strong id="move">Best for:</strong> ${car.comment}<br>
-        <strong id="move">Likes:</strong> <span id="rev">  ${car.review}</span><br>
-        <strong id="move"><button id ="buy">Like</button><strong>
-        </p>
-        `  
-        // The like event
-        cars.querySelector("#buy").addEventListener('click',()=>{
+ function renderCars(car){
+    const cars=document.createElement("p")
+    cars.className = "card1"
+     cars.innerHTML=`
+    
+    <P><strong> ${car.name}<br></strong>
+    <img src=${car.image} height="200px" width="300px">
+    <strong id="move">Brand:</strong> ${car.brand}<br>
+    <strong id="move">Price:</strong> ${car.price} Kenyan shillings<br>
+    <strong id="move">Condition:</strong> ${car.condition}<br>
+    <strong id="move">Mileage:</strong> ${car.mileage}miles<br>
+    <strong id="move">Top speed:</strong> ${car.topspeed}<br>
+    <strong id="move">Fuel consumption:</strong> ${car.fuelconsumption}litre/km<br>
+    <strong id="move">Best for:</strong> ${car.comment}<br>
+    <strong id="move">Likes:</strong> <span id="rev">  ${car.review}</span><br>
+    <strong id="move"><button id ="buy">Like</button><strong>
+    </p>
+    `  
+    // The like event
+    cars.querySelector("#buy").addEventListener('click',()=>{
             car.review ++;
             //changing the current number of likes           
             cars.querySelector('span').textContent = car.review;
             
         })
         //appending the cars 
-        document.getElementById("card").appendChild(cars);
+    document.getElementById("card").appendChild(cars);
 
     }
 
     //Renders form for hire purchase
-    document.getElementById("calculatorButton").addEventListener('click',()=>{
+document.getElementById("calculatorButton").addEventListener('click',()=>{
         const calc=document.getElementById("calc");
         calc.style.display = "block";
         calc.style.backgroundColor="#0D2949";
@@ -52,58 +52,61 @@ fetch(url)
     })
 
     //calculate hire purchase price
-    calculateAmountPaid =() =>{
-        //defining constants
-        const interest1 = 1.6
-        const interest2 = 1.2
-        const amount = document.getElementById("price").value
-        const deposit = 0.1*amount
-        const period = document.getElementById("period").value
+calculateAmountPaid =() =>{
+    //defining constants
+    const interest1 = 1.6
+    const interest2 = 1.2
+    const amount = document.getElementById("price").value
+    const deposit = 0.1*amount
+    const period = document.getElementById("period").value
 
-        if((amount > 2000 && period > 1)){
-            if(period<=24){
-                // calculate hire purchase if time is less than two years
-                if(amount < 4000000){
-                    hirePurchase = amount * interest1
-                    interest = "20%"
-                }
-                else{
-                    hirePurchase = amount*interest2
-                    interest = "10%"
-                }
-                let totalInstallment= hirePurchase - deposit
-                let monthlyInstallment = totalInstallment/period
-
-                let fullPayment = totalInstallment + deposit
-
-                //rendering in html 
-                document.getElementById("calculator").remove()
-                document.getElementById("calculatorButton").remove()
-                document.getElementById("outcome").innerHTML=`
-                <p >
-                <strong> Deposit to be paid:</strong> ${deposit}<br>
-                <strong> Interest rate:</strong> ${interest}<br>
-                <strong> Total installment:</strong> ${totalInstallment}<br>
-                <strong> Monthly installments:</strong> ${monthlyInstallment}<br>
-                <strong> Period:</strong> ${period}<br>
-                <strong> Total amount to be paid:</strong> ${fullPayment}
-                </p>
-                `
+    if((amount > 2000 && period > 1)){
+        if(period<=24){
+            // calculate hire purchase if time is less than two years
+            if(amount < 4000000){
+                hirePurchase = amount * interest1
+                interest = "20%"
             }
             else{
-                window.alert("You cannot pay for more than two years")
+                hirePurchase = amount*interest2
+                interest = "10%"
             }
+            let totalInstallment= hirePurchase - deposit
+            let monthlyInstallment = totalInstallment/period
+
+            let fullPayment = totalInstallment + deposit
+
+            //rendering in html 
+            document.getElementById("calculator").remove()
+            document.getElementById("calculatorButton").remove()
+            document.getElementById("outcome").innerHTML=`
+            <p >
+            <strong> Deposit to be paid:</strong> ${deposit}<br>
+            <strong> Interest rate:</strong> ${interest}<br>
+            <strong> Total installment:</strong> ${totalInstallment}<br>
+            <strong> Monthly installments:</strong> ${monthlyInstallment}<br>
+            <strong> Period:</strong> ${period}<br>
+            <strong> Total amount to be paid:</strong> ${fullPayment}
+            </p>
+            `
         }
-        else {
-            window.alert("Please input price and time")
+        else{
+                window.alert("You cannot pay for more than two years")
         }
     }
+    else {
+        window.alert("Please input price and time")
+    }
+    }
 
-    giveResponse = () => {
-        const name = document.getElementById("2").value
-        const question = document.getElementById("1").value
-        const ask = question.toLowerCase()
-        //console.log(ask)
+giveResponse = () => {
+    const name = document.getElementById("2").value
+    const question = document.getElementById("1").value
+    const ask = question.toLowerCase()
+    //console.log(ask)
+    const emptyString = ""
+
+    if(name != emptyString && ask != emptyString){
         question1 = "which are the best cars for 7 people"
         question2 ="which is the most cheapest car i can find"
 
@@ -130,26 +133,36 @@ fetch(url)
         <em> Replied by <strong>Calvin</strong> automotive engineer</em>
         `
     }
+    else{
+        window.alert("Dont forget to type you name and quesiton ")
+    }
+    }
 
  buyCar = () =>{
     const name = document.getElementById("a").value
     const email = document.getElementById("b").value
     const carName = document.getElementById("d").value
     const date = document.getElementById("f").value
+    const emptyString = ""
 
-    //Output after buying 
-    const buyingMsg = document.createElement("p")
-    buyingMsg.className="confirmation"
-    
-    // content inside the buying msg
-    buyingMsg.innerHTML=`
-    Thank you, ${name} for choosing Keroka car dealers.Your request of buying  ${carName} from us has been received
-    on ${date}. Expect a call from us soon in regards to the request <br>
-    <img src="images/pngtree-check-mark-green-tick-png-image_4535297-removebg-preview.png" id="cofirmationImage">
-    `
-    //displaying the output
-    document.getElementById("sale").remove()
-    document.getElementById("buyForm").appendChild(buyingMsg)
+    if(name != emptyString && carName != emptyString && date != emptyString){
+        //Output after buying 
+        const buyingMsg = document.createElement("p")
+        buyingMsg.className="confirmation"
+        
+        // content inside the buying msg
+        buyingMsg.innerHTML=`
+        Thank you, ${name} for choosing Keroka car dealers.Your request of buying  ${carName} from us has been received
+        on ${date}. Expect a call from us soon in regards to the request <br>
+        <img src="images/pngtree-check-mark-green-tick-png-image_4535297-removebg-preview.png" id="cofirmationImage">
+        `
+        //displaying the output
+        document.getElementById("sale").remove()
+        document.getElementById("buyForm").appendChild(buyingMsg)
+    }
+    else{
+        window.alert("Do not leave any field empty")
+    }
  }
 
  // displaying clients comment
