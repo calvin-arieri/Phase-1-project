@@ -31,6 +31,20 @@ fetch(url)
     // The like event
     cars.querySelector("#buy").addEventListener('click',()=>{
             car.review ++;
+            //update to server
+            fetch(`https://keroka-dealers.onrender.com/Cars/${car.id}`,{
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    review : car.review
+                  }),  
+            }
+           
+            )
+            .then(res => res.json())
+            .then(data => console.log(data))
             //changing the current number of likes           
             cars.querySelector('span').textContent = car.review;
             
