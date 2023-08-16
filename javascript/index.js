@@ -12,7 +12,7 @@ fetch(url)
 //rendering cars
  function renderCars(car){
     const cars=document.createElement("p")
-    cars.className = "card1"
+    cars.className = "card"
      cars.innerHTML=`
     
     <P><strong> ${car.name}<br></strong>
@@ -50,7 +50,7 @@ fetch(url)
             
         })
         //appending the cars 
-    document.getElementById("card").appendChild(cars);
+    document.querySelector(".card-container").appendChild(cars);
 
     }
 
