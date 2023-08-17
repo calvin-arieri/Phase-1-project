@@ -1,0 +1,57 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(66, 64, 64);
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+.flex-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.links img{
+    width: 2.4em;
+    border-radius: 50px;
+    margin-top: 1em;
+}
+.down{
+    text-align: center;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+
+}
+.footer h3{
+    color: rgb(207, 206, 206);
+}
+.footer form{
+    margin-top: 0em;
+}
+.footer textarea{
+    width: 22em;
+    height: 6em;    
+}
+.footer input{
+    width: 22em;
+    height: 3em;
+}
+.footer input[type="submit"]{
+    background-color: transparent;
+    width:6em;
+    font-weight: 800;
+    color: rgb(202, 198, 198);
+    border: none;
+}
+.footer iframe{
+    width: 22em;
+    height: 10em;
+}
+.down a{
+    color: rgb(188, 188, 188);
+}
+.down div{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}

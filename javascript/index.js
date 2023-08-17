@@ -2,32 +2,47 @@ addEventListener('DOMContentLoaded',fetchingFunction())
 
 // fetching from db.json
 function fetchingFunction(){
-const url = "https://keroka-dealers.onrender.com/Cars"
-fetch(url)
-.then(res=> res.json())
-.then(data => data.forEach(car =>renderCars(car)))
-}
+    let searchValue = document.getElementById("searchValue").value  
+    let theLength = searchValue.length     
+    const url = "https://keroka-dealers.onrender.com/Cars"
+    fetch(url)
+    .then(res=> res.json())
+    .then(data =>{
+        let  allCars = data.filter(car =>{
+            let name = car.name.slice(0, theLength).toLowerCase()
+            if(theLength > 1 && name === searchValue.toLowerCase()){
+                return car
+            }
+            else if(theLength <= 0){
+                return data
+            }
+        })
+        allCars.map(car=>{
+            renderCars(car)
+        })
+    })
+    }
+    
 
 
 //rendering cars
  function renderCars(car){
     const cars=document.createElement("p")
-    cars.className = "card1"
+    cars.className = "card"
      cars.innerHTML=`
     
     <P><strong> ${car.name}<br></strong>
-    <img src=${car.image} height="200px" width="300px">
+    <img src=${car.image} height="180px" width="280px">
     <strong id="move">Brand:</strong> ${car.brand}<br>
-    <strong id="move">Price:</strong> ${car.price} Kenyan shillings<br>
+    <strong id="move">Price:</strong> KES${car.price}<br>
     <strong id="move">Condition:</strong> ${car.condition}<br>
     <strong id="move">Mileage:</strong> ${car.mileage}miles<br>
     <strong id="move">Top speed:</strong> ${car.topspeed}<br>
     <strong id="move">Fuel consumption:</strong> ${car.fuelconsumption}litre/km<br>
-    <strong id="move">Best for:</strong> ${car.comment}<br>
-    <strong id="move">Likes:</strong> <span id="rev">  ${car.review}</span><br>
+    <span>${car.comment}</><span><br>
+    <strong id="move">Likes:</strong>${car.review}
     <strong id="move"><button id ="buy">Like</button><strong>
-    </p>
-    `  
+    </p>    `  
     // The like event
     cars.querySelector("#buy").addEventListener('click',()=>{
             car.review ++;
@@ -50,7 +65,7 @@ fetch(url)
             
         })
         //appending the cars 
-    document.getElementById("card").appendChild(cars);
+    document.querySelector(".card-container").appendChild(cars);
 
     }
 
