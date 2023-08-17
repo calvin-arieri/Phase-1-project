@@ -48,32 +48,36 @@
                 <input 
                 placeholder="search"
                 class="button-30"
-                type="text">
-                <button class="button-30">search</button>
+                type="text">                
             </div>
         </div>
         <div id="button"></div>
         <div class="card-container">
         </div>
-        <div id="buyForm">
-            <form id="sale">
-                <label for="name" class="label">Please enter your name</label><br>
-                <input type="text" id="a" name="name" required><br>
-                <label for="email" class="label">Enter your email</label><br>
-                <input type="email" name="" id="b" required><br>
-                <label for="phone" class="label">Phone number</label><br>
-                <input type="text" id="c" required><br>
-                <label for="car" class="label">Enter name of car</label><br>
-                <input type="text" id="d" required><br>
-                <label for="condition" class="label">Condition</label><br>
-                <input type="text" name="" id="e" required ><br>
-                <label for="date" class="label">Date</label><br>
-                <input type="date" name="" id="f" required><br><br>
-                <button onclick="buyCar()">Buy</button>
-            </form>
+
+        <div class="buy-form">
+            <div>
+                <form id="sale" style="display: none;">
+                    <h2>Fill in to buy a car</h2>
+                        <label for="name" class="label">Please enter your name<span>*</span></label>
+                        <input type="text" id="a" name="name" required>
+                        <label for="email" class="label">Enter your email<span>*</span></label>
+                        <input type="email" name="" id="b" required>
+                        <label for="phone" class="label">Phone number<span>*</span></label>
+                        <input type="text" id="c" required>
+                        <label for="car" class="label">Enter name of car<span>*</span></label>
+                        <input type="text" id="d" required>
+                        <label for="condition" class="label">Condition<span>*</span></label>
+                        <input type="text" name="" id="e" required >
+                        <label for="date" class="label">Date<span>*</span></label>
+                        <input type="date" name="" id="f" required><br>
+                        <button onclick="buyCar()">Buy</button>                   
+                </form>
+            </div>       
+
         </div>
         <div>
-            <p id="infor">
+            <p class="payment">
                 If you decide to pay full amount of the car you will only pay the amount displayed on price. But if you decide to buy the car on hire purchase 
                 please use our calculator below to show you the amount you will pay. <br>            
                 <button id="calculatorButton">Calculate Hire purchase amount</button>

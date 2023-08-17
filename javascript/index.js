@@ -16,18 +16,17 @@ fetch(url)
      cars.innerHTML=`
     
     <P><strong> ${car.name}<br></strong>
-    <img src=${car.image} height="200px" width="300px">
+    <img src=${car.image} height="180px" width="280px">
     <strong id="move">Brand:</strong> ${car.brand}<br>
-    <strong id="move">Price:</strong> ${car.price} Kenyan shillings<br>
+    <strong id="move">Price:</strong> KES${car.price}<br>
     <strong id="move">Condition:</strong> ${car.condition}<br>
     <strong id="move">Mileage:</strong> ${car.mileage}miles<br>
     <strong id="move">Top speed:</strong> ${car.topspeed}<br>
     <strong id="move">Fuel consumption:</strong> ${car.fuelconsumption}litre/km<br>
-    <strong id="move">Best for:</strong> ${car.comment}<br>
-    <strong id="move">Likes:</strong> <span id="rev">  ${car.review}</span><br>
+    <span>${car.comment}</><span><br>
+    <strong id="move">Likes:</strong>${car.review}
     <strong id="move"><button id ="buy">Like</button><strong>
-    </p>
-    `  
+    </p>    `  
     // The like event
     cars.querySelector("#buy").addEventListener('click',()=>{
             car.review ++;
