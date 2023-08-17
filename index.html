@@ -7,6 +7,8 @@
     <title>Keroka car dealer</title>
     <link rel="icon" type="image/image" href="images/campbell-3ZUsNJhi_Ik-unsplash.jpg">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/question.css" >
 </head>
 <body>
     <div id="header">
@@ -19,10 +21,14 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                </ol>
+            </nav>
+            <div>
+                <ol>
                     <li><a href="#logIn">Log in</a></li>
                     <li><a href="signUp">Sign up</a></li>
                 </ol>
-            </nav>
+            </div>
         </div>
 
         <div class="dealer-info">
@@ -89,12 +95,12 @@
                 <div id="calculator">                    
                     <div style="display: none;"  id="calc">
                         <form action="">
-                            <label class="hi" >Enter price of the car </label><br>
-                            <input id="price" type="text" class="hi" required><br>
-                            <label class="hi" >How many months will you use to pay</label>label><br>
-                            <input id="period" type="text"class="hi" required><br>
-                            <button onclick="calculateAmountPaid()">calculate</button>
+                            <label class="hi" >Enter price of the car </label>
+                            <input id="price" type="text" class="hi" required>
+                            <label class="hi" >How many months will you use to pay</label>
+                            <input id="period" type="text"class="hi" required>
                         </form>
+                        <button onclick="calculateAmountPaid()">calculate</button>
                     </div>
                 </div>
                 <div id="outcome">
@@ -105,14 +111,20 @@
     </div>
 
     <!-- coments and question part -->
-    <div id="comments">
+    <div class="questions">
         <div id="question">
             <p>
                 Do you have any questions?
             </p>
-            <span>Please enter your names</span><br>
+            <label>Please enter your names</label><br>
             <input type="text"  id="2" required><br>
-            <span>Your question</span><br>
+            <label>Email</label><br>
+            <input
+            type="email"
+            id="email"
+            >
+            <br>
+            <label>Your question</label><br>            
             <input type="text"  id="1" required><br>
             <button onclick="giveResponse()">Send</button>
         </div>
@@ -131,20 +143,13 @@
     </div>
 
     <!-- footer -->
-    <div id="footer">        
-        <div id="flex">
-            <form action="" id="getc">
-                <label class="hi" for="name">Name</label><br>
-                <input class="hi" type="text" id="yourname" required ><br>
-                <label class="hi" for="comment">comment</label><br>
-                <input class="hi" type="text" id="youreply" required ><br>
-                <input type="submit">
-            </form>
-            <div id="links">
+    <div class="footer">        
+        <div class="flex-footer">
+            <div class="links">
                 <div id="connection">
                     <h3>Stay Connected</h3>
                     <div id="contactUs">
-                        Call us: 0742073092 <br>
+                        Call us: <a href="tel:+254742073092">0742073092</a> <br>
                         Our social media pages
                         <div id="socialmedia">
                             <img class="media" src="images/face.png" alt="">
@@ -155,8 +160,22 @@
                     </div>
                 </div>
             </div>
+            <div>
+                <h3>Feedback</h3>
+                <form id="getc">
+                    <label class="hi" for="name">Name</label><br>
+                    <input class="hi" type="text"
+                    placeholder="please enter your name"
+                     id="yourname" required ><br>
+                    <label class="hi" for="comment">comment</label><br>
+                    <textarea class="hi" type="text" id="youreply" required >
+                    </textarea>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
             <div id="who">
-                <div id="whoheader"><h3>Who we are</h3></div>
+                <div><h3>Who we are</h3></div>
                 <div>
                     <a href="">Careers</a> <br>
                     <a href="">Blog</a><br>
@@ -165,23 +184,24 @@
                 </div>
             </div>
             <div id="offices">
-                <h4>Our main offices are in:</h4> 
+                <h3>Our main offices are in:</h3> 
                 <p>
                     Keroka plaza, Opposite Keroka general hospital <br>
                     We are in the fifth floor, <br>
-                    <br>
-                    Please find time and visit our offices
-                </p>       
+                </p> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4482688274998!2d34.94471461007604!3d-0.7803609352781911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b6bbc6399a4cb%3A0xcd8a53f7a1085e4c!2sKeroka%20Plaza!5e0!3m2!1sen!2ske!4v1692291411000!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
             </div>
         </div>
 
-        <div id="down">
-            <a href="">Terms of service</a>
-            <a href="">Privacy Policy</a>
-            <span> © 2023 Calvin dealer</span>
+        <div class="down">
+            <div>
+                <a href="">Terms of service</a>
+                <a href="">Privacy Policy</a>
+                <span> © 2023 Keroka dealer</span>
+            </div>
         </div>
     </div>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="/javascript/index.js"></script>
 </body>
 </html>
