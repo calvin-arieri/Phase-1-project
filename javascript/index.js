@@ -2,11 +2,27 @@ addEventListener('DOMContentLoaded',fetchingFunction())
 
 // fetching from db.json
 function fetchingFunction(){
-const url = "https://keroka-dealers.onrender.com/Cars"
-fetch(url)
-.then(res=> res.json())
-.then(data => data.forEach(car =>renderCars(car)))
-}
+    let searchValue = document.getElementById("searchValue").value  
+    let theLength = searchValue.length     
+    const url = "https://keroka-dealers.onrender.com/Cars"
+    fetch(url)
+    .then(res=> res.json())
+    .then(data =>{
+        let  allCars = data.filter(car =>{
+            let name = car.name.slice(0, theLength).toLowerCase()
+            if(theLength > 1 && name === searchValue.toLowerCase()){
+                return car
+            }
+            else if(theLength <= 0){
+                return data
+            }
+        })
+        allCars.map(car=>{
+            renderCars(car)
+        })
+    })
+    }
+    
 
 
 //rendering cars
