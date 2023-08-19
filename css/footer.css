@@ -55,3 +55,9 @@
     margin-top: 1em;
     margin-bottom: 1em;
 }
+@media only screen and (max-width: 600px){
+    .footer iframe{
+        width: 19.5em;
+        margin-left: 0.5em;
+    }
+}
