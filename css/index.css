@@ -202,7 +202,7 @@ body{
   body{
     font-size: 0.9em;
     padding: 2px;
-    width: 100vw;
+    width: 90vw;    
   }
   .topnav{
     display: flex;
