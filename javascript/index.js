@@ -601,7 +601,10 @@ function handleDisplay(){
 }
     
 
-
+const wtf=()=>{
+  return "I thought this was supposed to be a fun bae"
+}
+console.log(wtf())
 
    
    
