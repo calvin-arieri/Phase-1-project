@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{
   font-family: "JetBrains Mono",monospace;
-  margin: 0px;
+  padding: 0em;
   background-color:  rgb(248,248,255); 
+  margin:0em;
 }
 .topnav{
   display: flex;
@@ -197,19 +198,20 @@ body{
   margin-left: 0.9em;  
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   body{
     font-size: 0.9em;
+    padding: 2px;
+    width: 100vw;
   }
   .topnav{
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
     font-weight: 500; 
-    width: 100%;
-    padding: 0em;
     background-color: rgb(248,248,255);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    width: 100vw;
   }
   .topnav ol{
     display: flex;
@@ -220,27 +222,48 @@ body{
     flex-direction: column;
     margin-top:40em;  
     font-size: 0.7em; 
+    width: 100vw;
   }
   .dealer-info p{
-    width: 22em;
-  }
-  .flex-footer {
-    display: flex;
-    flex-direction: column;
+    width: 80vw;
   }
   .dealer-info h1{
-    align-self: flex-start;
+   justify-content: center;
   }
   .dealer-info button{
-    align-self: flex-start;
+   justify-self: center;
     width: 10em;
   }
   .dealer-info img{
     margin-bottom: 30em;
     margin-top: 4em;
-    width: 39em;
+    align-self: center;
+    justify-self: center;
+    width: 80vw;
   }
   .search-bar input{
-    width: 20em;
+    width: 60vh;
+  }
+  .card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 0.8em;
+    align-self: center;  
+    justify-self: center; 
+    width: 60%;
+  }
+  .card-container{
+    gap: 1em;
+    flex-direction: column;
+    
+  }
+  .topnav nav{
+    margin: 0px;
+  }
+  .payment{
+    padding: 1em;
+    font-size: 1.8em;
+  }
+  #calculatorButton{
+    width:29vw ;
   }
 }

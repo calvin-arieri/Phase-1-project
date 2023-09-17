@@ -55,3 +55,20 @@
     margin-top: 1em;
     margin-bottom: 1em;
 }
+@media(max-width: 481px) {
+    .footer{
+        width: 100vw;
+    }
+    .flex-footer{
+        flex-direction: column;
+        justify-content: center;  
+        padding: 1em;      
+    }
+    .flex-footer div:nth-child(2){
+        order: -1;
+    }
+    .links{
+        order: 2;
+    }
+}
+    
