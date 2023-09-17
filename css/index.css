@@ -5,6 +5,8 @@ body{
   padding: 0em;
   background-color:  rgb(248,248,255); 
   margin:0em;
+  display: flex;
+  flex-direction: column; 
 }
 .topnav{
   display: flex;
@@ -226,9 +228,6 @@ body{
   }
   .dealer-info p{
     width: 80vw;
-  }
-  .dealer-info h1{
-   justify-content: center;
   }
   .dealer-info button{
    justify-self: center;
